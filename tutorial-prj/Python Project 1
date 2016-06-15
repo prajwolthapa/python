@@ -1,0 +1,10 @@
+def HelloWorld():
+    c =0
+    vName = input("What is your Name???")
+    while c <=8:
+        print("My Name is " + vName + " "+ str(c))
+        c += 1
+
+
+HelloWorld();
+
