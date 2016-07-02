@@ -1,12 +1,12 @@
 # This is a small program to guess a number
 import random
+
 name = raw_input("Hello !! What is your name???")
 secretNumber = random.randint(1,20)
 print(secretNumber)
 #print(secretNumber)
 
 print("Well " + name + " I am thinking of a number betwee 1 and 19 , Can you take a gues??? ")
-
 
 guess_taken=1
 while guess_taken <= 6:
