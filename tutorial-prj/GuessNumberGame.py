@@ -1,25 +1,45 @@
 # This is a small program to guess a number
 import random
-print("Hello !! What is your name???")
-name=input()
-secretNumber=random.randint(1,20)
-print("Well" + name + "I am thinking of a number betwee 1 and 19")
+name = raw_input("Hello !! What is your name???")
+secretNumber = random.randint(1,20)
+print(secretNumber)
+#print(secretNumber)
 
-for guessTaken in range(1,7):
-    print("Take a gues!!!")
-    guess =int(input())
+print("Well " + name + " I am thinking of a number betwee 1 and 19 , Can you take a gues??? ")
 
-    if guess > secretNumber:
-        print("Its too high, guess something lower")
-    elif guess<secretNumber:
-        print("Its a bit low , guess something bigger")
+
+guess_taken=1
+while guess_taken <= 6:
+    number_guessed = int(raw_input("What is the number????"))   
+    if number_guessed > secretNumber:
+        print("Guess Something low ")
+        guess_taken =guess_taken + 1
+    elif number_guessed < secretNumber:
+        print("Guess Something higher ")
+        guess_taken =guess_taken + 1
     else:
         break
 
-if (guess== secretNumber):
+
+if (number_guessed == secretNumber):
     print("Good Job "+ name +"!!!!")
 else:
     print("Nope I was thinking of " + str(secretNumber))
+
+
+
+
+
+
+# for guessTaken in range(1,7):
+#     guess =int(raw_input())
+
+#     if guess > secretNumber:
+#         print("Its too high, guess something lower")
+#     elif guess<secretNumber:
+#         print("Its a bit low , guess something bigger")
+#     else:
+#         break
 
 
 
